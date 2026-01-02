@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Card Layout</title>
+<style>
+/* 通用設定 */
+    * {
+        box-sizing: border-box;
+    }
+    h1, h2, h3, h4, p {
+        margin: 0;/*清除傳統標籤預設的margin*/
+    }
+    body {
+        font-family: sans-serif;/*設定頁面預設字體*/
+    }
+    img {
+        width: 100%;/*讓圖檔寬度等於上一層的寬度*/
+    }
+
+/* 普通小卡設定 */
+    .card {
+        color: #1b0c01;
+        background-color: #d5e2dd;
+        width: 250px;
+        border-radius: 16px;/*設定小卡圓角*/
+        overflow: hidden;/*隱藏超出小卡範圍的內容*/
+        box-shadow: 0 0 6px 0 rgba(173, 73, 73, 0.5);
+    }
+    .card-content {
+        padding: 0px 16px 20px 16px; /*順序：上右下左*/
+    }
+    .card-content h3{
+        margin: 8px 0;
+        }
+    .card-content p {
+        line-height: 150%;
+    }
+
+/*主圖卡設定*/
+    main {
+        color: whitesmoke;
+        text-align: center;/*讓文字居中*/
+        width: 1024px; height: 400px;
+        padding-top: 80px;
+        margin:0 auto;
+        background-color: #ba8234;
+        background-image: url(image/1.jpg);
+        background-size: cover;/*圖片寬度等於區塊寬度*/
+        background-position-y: -150px;/*調整圖片垂直位置*/
+        border-radius: 16px;
+    }
+    main h1 {
+        font-size: 90px;
+        font-family: serif;
+        text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+        /*設定文字陰影：X 軸位置 / Y 軸位置 / 模糊大小 / 顏色*/
+    }
+    main h3 {
+        font-size: 30px;
+        text-shadow: 0 0 4px rgb(0, 0, 0, 0.6);
+    }
+
+
+/*小卡列表設定*/
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+</style>
+</head>
+<body>
+<h1>如果怪獸</h1>
+<h2>CARD小卡</h2>
+
+   <div class="card">
+
+    <img src="image/6.jpg" alt="" class="card-image">
+    <div class="card-content">
+        <h3 class="card-title">What if Monster</h3>
+        
+        <p class="card-intro">We are a group of little monsters, each with our own profession.</p>
+    </div>
+    </div>
+    
+<h2>What if Monster</h2>
+    <main>
+        <h1>What if Monster</h1>
+        <h3>I want to be a monster. Do you want to?</h3>
+    </main>
+
+<h2>角色介紹</h2>
+
+<section class="card-list">
+   <div class="card">
+    <img src="image/5.jpg" alt="" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">POPO</h3>      
+            <p class="card-intro">POPO is a curious astronaut monster traveling across the universe.
+Floating between stars and planets, POPO searches for new worlds—and maybe new friends.</p>
+        </div>
+    </div>
+
+
+   <div class="card">
+    <img src="image/4.jpg" alt="" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">MOMO</h3>      
+            <p class="card-intro">MOMO is a mysterious creature born from countless laboratory experiments.
+Clumsy but powerful, MOMO’s body constantly changes, making it both unpredictable and dangerous.</p>
+        </div>
+    </div>
+
+
+   <div class="card">
+    <img src="image/3.jpg" alt="" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">GOGO</h3>      
+            <p class="card-intro">GOGO is a fearless street racer who lives for speed and adrenaline.
+With engines roaring and tires burning, GOGO rushes through the city as if every road is a racetrack.</p>
+        </div>
+    </div>
+
+
+   <div class="card">
+    <img src="image/2.jpg" alt="" class="card-image">
+        <div class="card-content">
+            <h3 class="card-title">DODO</h3>      
+            <p class="card-intro">DODO is a genius bio-doctor obsessed with strange creatures and unknown life forms.
+Always carrying test tubes and scanners, DODO believes every monster has a secret waiting to be discovered.</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
